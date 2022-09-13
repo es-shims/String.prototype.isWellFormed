@@ -1,0 +1,38 @@
+{
+	"name": "string.prototype.iswellformed",
+	"version": "0.0.0",
+	"description": "An ESnext spec-compliant `String.prototype.isWellFormed` shim/polyfill/replacement that works as far down as ES3.",
+	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/es-shims/String.prototype.isWellFormed.git"
+	},
+	"keywords": [
+		"javascript",
+		"ecmascript",
+		"polyfill",
+		"shim",
+		"es-shim API",
+		"unicode",
+		"string",
+		"surrogate",
+		"pair",
+		"well-formed"
+	],
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/es-shims/String.prototype.isWellFormed/issues"
+	},
+	"homepage": "https://github.com/es-shims/String.prototype.isWellFormed#readme"
+}
