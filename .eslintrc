@@ -9,6 +9,7 @@
 			"capIsNewExceptions": [
 				"RequireObjectCoercible",
 				"IsStringWellFormedUnicode",
+				"SymbolDescriptiveString",
 				"ToString",
 			],
 		}],

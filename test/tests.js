@@ -3,6 +3,7 @@
 var v = require('es-value-fixtures');
 var forEach = require('for-each');
 var inspect = require('object-inspect');
+var SymbolDescriptiveString = require('es-abstract/2022/SymbolDescriptiveString');
 
 var leadingPoo = '\uD83D';
 var trailingPoo = '\uDCA9';
@@ -12,7 +13,7 @@ module.exports = function (isWellFormed, t) {
 	t.test('well-formed strings', function (st) {
 		forEach(v.nonStrings.concat(v.strings, wholePoo), function (str) {
 			if (str != null) { // eslint-disable-line eqeqeq
-				st.ok(isWellFormed(String(str)), inspect(str) + ' is well-formed');
+				st.ok(isWellFormed(typeof str === 'symbol' ? SymbolDescriptiveString(str) : String(str)), inspect(str) + ' is well-formed');
 			}
 		});
 
