@@ -5,6 +5,7 @@
 
 	"rules": {
 		"id-length": 0,
+		"max-lines-per-function": 0,
 		"new-cap": [2, {
 			"capIsNewExceptions": [
 				"RequireObjectCoercible",

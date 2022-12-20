@@ -4,12 +4,47 @@ var v = require('es-value-fixtures');
 var forEach = require('for-each');
 var inspect = require('object-inspect');
 var SymbolDescriptiveString = require('es-abstract/2022/SymbolDescriptiveString');
+var mockProperty = require('mock-property');
+var hasBigInts = require('has-bigints')();
+var hasSymbols = require('has-symbols')();
 
 var leadingPoo = '\uD83D';
 var trailingPoo = '\uDCA9';
 var wholePoo = leadingPoo + trailingPoo;
 
 module.exports = function (isWellFormed, t) {
+	t.test('does not call prototype toString methods on primitives', function (st) {
+		st.teardown(mockProperty(Boolean.prototype, 'toString', function fakeToString() {
+			st.fail('Boolean.prototype.toString should not be called');
+		}));
+		st.teardown(mockProperty(Number.prototype, 'toString', function fakeToString() {
+			st.fail('Number.prototype.toString should not be called');
+		}));
+		if (hasBigInts) {
+			st.teardown(mockProperty(BigInt.prototype, 'toString', function fakeToString() {
+				st.fail('BigInt.prototype.toString should not be called');
+			}));
+		}
+		if (hasSymbols) {
+			st.teardown(mockProperty(Symbol.prototype, 'toString', function fakeToString() {
+				st.fail('Symbol.prototype.toString should not be called');
+			}));
+		}
+
+		forEach(v.nonNullPrimitives, function (nonNullPrimitive) {
+			if (typeof nonNullPrimitive === 'symbol') {
+				st['throws'](
+					function () { isWellFormed(nonNullPrimitive); },
+					inspect(nonNullPrimitive) + ' throws when implicitly coerced to a string, and does not call the proto method'
+				);
+			} else if (typeof nonNullPrimitive !== 'string') {
+				st.equal(isWellFormed(nonNullPrimitive), true, inspect(nonNullPrimitive) + ' stringifies without calling the proto method');
+			}
+		});
+
+		st.end();
+	});
+
 	t.test('well-formed strings', function (st) {
 		forEach(v.nonStrings.concat(
 			v.strings,
