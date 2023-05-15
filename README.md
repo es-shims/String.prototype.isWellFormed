@@ -11,7 +11,7 @@
 
 An ESnext spec-compliant `String.prototype.isWellFormed` shim/polyfill/replacement that works as far down as ES3.
 
-This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the proposed [spec](https://tc39.es/proposal-is-usv-string/).
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the expected ES2024 [spec](https://tc39.es/proposal-is-usv-string/).
 
 Because `String.prototype.isWellFormed` depends on a receiver (the `this` value), the main export takes the string to operate on as the first argument.
 
