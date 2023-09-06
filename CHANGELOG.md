@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/es-shims/String.prototype.isWellFormed/compare/v1.0.0...v1.0.1) - 2023-09-06
+
+### Commits
+
+- [Tests] add more test coverage from https://github.com/tc39/test262/pull/3755 [`9f9bf60`](https://github.com/es-shims/String.prototype.isWellFormed/commit/9f9bf60f00a8d482f58eeb5a9edc111bee021ae9)
+- [Deps] update `es-abstract` [`37a9dca`](https://github.com/es-shims/String.prototype.isWellFormed/commit/37a9dca7355bce954575d6d39ea4e458828eea02)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud`, `tape` [`a5da0d4`](https://github.com/es-shims/String.prototype.isWellFormed/commit/a5da0d496c317351e041e58d4fec45b3ef632ec3)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud`, `tape` [`6d990b3`](https://github.com/es-shims/String.prototype.isWellFormed/commit/6d990b3f4c3a153f19c392173177c781f78ba82c)
+- [Deps] update `define-properties`, `es-abstract` [`131dd8e`](https://github.com/es-shims/String.prototype.isWellFormed/commit/131dd8e380a916e69096612b68816b0b36b687e0)
+- [readme] proposal is now stage 4 [`308866c`](https://github.com/es-shims/String.prototype.isWellFormed/commit/308866cd193718f530cc138146a106ba58fe2019)
+
 ## v1.0.0 - 2022-11-30
 
 ### Commits
