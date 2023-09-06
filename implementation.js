@@ -1,8 +1,8 @@
 'use strict';
 
-var IsStringWellFormedUnicode = require('es-abstract/2022/IsStringWellFormedUnicode');
-var RequireObjectCoercible = require('es-abstract/2022/RequireObjectCoercible');
-var ToString = require('es-abstract/2022/ToString');
+var IsStringWellFormedUnicode = require('es-abstract/2023/IsStringWellFormedUnicode');
+var RequireObjectCoercible = require('es-abstract/2023/RequireObjectCoercible');
+var ToString = require('es-abstract/2023/ToString');
 
 module.exports = function isWellFormed() {
 	var O = RequireObjectCoercible(this);
