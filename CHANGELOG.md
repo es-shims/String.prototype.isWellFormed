@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2](https://github.com/es-shims/String.prototype.isWellFormed/compare/v1.0.1...v1.0.2) - 2024-03-18
+
+### Commits
+
+- [Refactor] remove useless ESM [`976e367`](https://github.com/es-shims/String.prototype.isWellFormed/commit/976e3677575554341a8c24c648b8d90473c836d1)
+- [actions] remove redundant finisher [`07f3502`](https://github.com/es-shims/String.prototype.isWellFormed/commit/07f35025d3eb34a57353358fcedd5dbbf4e30771)
+- [Deps] update `call-bind`, `define-properties`, `es-abstract` [`ef4ad53`](https://github.com/es-shims/String.prototype.isWellFormed/commit/ef4ad5317a78ad4256f49c419404a5b8b606b659)
+- [Dev Deps] update `aud`, `mock-property`, `npmignore`, `tape` [`afea076`](https://github.com/es-shims/String.prototype.isWellFormed/commit/afea07653e27daea35ff73649652254906a6cef1)
+- [Refactor] use `es-object-atoms` where possible [`79fb89f`](https://github.com/es-shims/String.prototype.isWellFormed/commit/79fb89f90a6b8e84602fa1f2cc4962b5092a9556)
+- [meta] add missing `engines.node` [`c513012`](https://github.com/es-shims/String.prototype.isWellFormed/commit/c513012126dd22002d5180591a6c14fa956b397b)
+
 ## [v1.0.1](https://github.com/es-shims/String.prototype.isWellFormed/compare/v1.0.0...v1.0.1) - 2023-09-06
 
 ### Commits
